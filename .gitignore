@@ -1,3 +1,5 @@
 .idea
 tdd.iml
 */*.gitkeep
+.DS_Store
+/target
