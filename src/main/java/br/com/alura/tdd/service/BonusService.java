@@ -11,7 +11,7 @@ public class BonusService {
 		if (valor.compareTo(new BigDecimal("1000")) > 0) {
 			valor = BigDecimal.ZERO;
 		}
-		return valor;
+		return valor.setScale(2);
 	}
 
 }
