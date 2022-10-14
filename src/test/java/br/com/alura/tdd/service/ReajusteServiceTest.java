@@ -1,5 +1,6 @@
 package br.com.alura.tdd.service;
 
+import br.com.alura.tdd.builder.FuncionarioBuilder;
 import br.com.alura.tdd.modelo.Funcionario;
 import br.com.alura.tdd.tipo.Desempenho;
 import org.junit.jupiter.api.AfterAll;
@@ -8,7 +9,6 @@ import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 
 import java.math.BigDecimal;
-import java.time.LocalDate;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
 
@@ -30,7 +30,7 @@ class ReajusteServiceTest {
     @BeforeEach
     public void inicializar(){
         service = new ReajusteService();
-        funcionarioRodrigo = new Funcionario("Rodrigo", LocalDate.now(), new BigDecimal("1000"));
+        funcionarioRodrigo = FuncionarioBuilder.novo().salario("1000").build();
     }
 
     @Test
